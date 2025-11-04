@@ -1,18 +1,4 @@
 PRAGMA foreign_keys = ON;
-CREATE TABLE cars(
-    id INTEGER PRIMARY KEY,
-    sale_person_id INTEGER,
-    customer_id INTEGER,
-    FOREIGN KEY (sale_person_id) REFERENCES salesperson(id),
-    FOREIGN KEY (customer_id) REFERENCES customers(id),
-    vin VARCHAR(200) UNIQUE NOT NULL,
-    brand VARCHAR(200),
-    model VARCHAR(200),
-    year CHECK(year <= 2026),
-    cost DECIMAL(8,2),
-    is_new BOOLEAN,
-    mileage INTEGER CHECK(mileage >= 0)
-);
 
 CREATE TABLE invoices(
     id INTEGER PRIMARY KEY,
