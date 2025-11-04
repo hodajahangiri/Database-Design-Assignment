@@ -80,7 +80,7 @@ CREATE TABLE mechanics(
 );
 
 CREATE TABLE mechanic_services(
-    id PRIMARY KEY,
+    id INTEGER PRIMARY KEY,
     service_ticket_id INTEGER,
     mechanic_id INTEGER,
     hours_worked DECIMAL(5,2),
